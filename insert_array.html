@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const insertFun = () => {
+        let data = [10, 30, 40, 50];
+        let newEl = parseInt(document.getElementById("newEl").value);
+        let position = parseInt(document.getElementById("position").value);
+
+        for (let i = data.length - 1; i >= 0; i--) {
+          if (i >= position) {
+            data[i + 1] = data[i];
+          }
+          if (i === position) {
+            data[i] = newEl;
+          }
+           
+        }
+         document.write(data);
+      
+      };
+    </script>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="Enter Position" />
+    <input type="text" id="newEl" placeholder="Enter Element" />
+    <button onclick="insertFun()">Insert</button>
+  </body>
+</html>

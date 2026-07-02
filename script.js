@@ -554,5 +554,36 @@
 // };
 // console.log(kebabCase("hello kaise ho"))
 
+// let data = [10, 30, 40, 50];
+// let newEl = 20;
+// let postition = 1;
 
+// for (let i = data.length - 1; i >= 0; i--) {
+//   if (i >= postition) {
+//     data[i + 1] = data[i];
+//   }
 
+//   if(i===postition){
+//     data[i]= newEl
+//   }
+//   console.log(data);
+
+// }
+
+let data = [10, 40, 50];
+let newEl = 20;
+let newEl2 = 30;
+let post1 = 1;
+let post2 = 2;
+
+for (let i = data.length - 1; i >= 0; i--) {
+  if (i >= post1 || post2) {
+    data[i + 1] = data[i];
+  }
+  if (i === post1 || post2) {
+    data[i] = newEl;
+    data[i] = newEl2
+  }
+  console.log(data);
+  
+}

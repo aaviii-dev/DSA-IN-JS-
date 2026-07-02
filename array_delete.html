@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      const arr_del = () => {
+        let data = [10, 20, 30, 40, 50];
+        let position = parseInt(document.getElementById("position").value);
+        for (let i = position; i < data.length - 1; i++) {
+          if (!isNaN(position) && position >= 0 && position < data.length) {
+            data[i] = data[i + 1];
+            data.length = data.length - 1;
+            document.write(data);
+          
+          } else {
+            alert("Invalid Position");
+          }
+        }
+          
+      };
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="position" placeholder="Enter delete position" />
+    <button onclick="arr_del()">Delete</button>
+  </body>
+</html>
